@@ -4,7 +4,7 @@ import posts from "@/data/posts.json";
 export default function Home() {
   return (
     <section>
-      {/* Hero */}
+      {/* Hero*/}
       <div className="mb-12">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-3">
           Welcome to blog
