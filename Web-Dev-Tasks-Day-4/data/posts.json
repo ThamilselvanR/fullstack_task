@@ -5,7 +5,7 @@
     "title": "Welcome to blog",
     "date": "2026-08-20",
     "excerpt": "Hello and welcome! blog is a space for curious minds to read about tech, code, and everything in between.",
-    "content": "Hello and welcome to blog — a cozy corner of the internet for curious minds.\n\nThis blog is built with Next.js and powered by a local JSON file, keeping things simple and fast. Whether you are here to learn something new, get inspired, or just take a break, we hope you find something worth your time.\n\nStay tuned for more posts coming soon. In the meantime, feel free to explore and enjoy the peace that comes with being a lazy panda. 🐼"
+    "content": "Hello and welcome to blog — a cozy corner of the internet for curious minds.\n\nThis blog is built with Next.js and powered by a local JSON file, keeping things simple and fast. Whether you are here to learn something new, get inspired, or just take a break, we hope you find something worth your time.\n\nStay tuned for more posts coming soon. In the meantime, feel free to explore and enjoy the peace that comes with being a lazy panda. "
   },
   {
     "id": 2,
@@ -21,6 +21,6 @@
     "title": "Why JSON is Great for Small Projects",
     "date": "2026-08-22",
     "excerpt": "Sometimes a database is overkill. For small blogs and side projects, a local JSON file is all you need to get things moving.",
-    "content": "Not every project needs a full database. For small blogs, portfolios, or side projects, a local JSON file can be the perfect data store.\n\n## The Benefits\n\n**Simple to read and write**: JSON is human-readable and easy to edit in any text editor.\n\n**No setup required**: No databases to configure, no connection strings to manage. Just a file in your project.\n\n**Version control friendly**: Because it's just a text file, your data lives right alongside your code in Git.\n\n**Fast**: Reading a local file is extremely fast — no network round-trips or database queries.\n\n## When to Move On\n\nOf course, JSON files have limits. When your data grows large, when you need complex queries, or when multiple users need to write data simultaneously, it's time to reach for a proper database like PostgreSQL or MongoDB.\n\nBut for getting started? A JSON file is a lazy panda's best friend. 🐼"
+    "content": "Not every project needs a full database. For small blogs, portfolios, or side projects, a local JSON file can be the perfect data store.\n\n## The Benefits\n\n**Simple to read and write**: JSON is human-readable and easy to edit in any text editor.\n\n**No setup required**: No databases to configure, no connection strings to manage. Just a file in your project.\n\n**Version control friendly**: Because it's just a text file, your data lives right alongside your code in Git.\n\n**Fast**: Reading a local file is extremely fast — no network round-trips or database queries.\n\n## When to Move On\n\nOf course, JSON files have limits. When your data grows large, when you need complex queries, or when multiple users need to write data simultaneously, it's time to reach for a proper database like PostgreSQL or MongoDB.\n\nBut for getting started? A JSON file is a lazy panda's best friend. "
   }
 ]

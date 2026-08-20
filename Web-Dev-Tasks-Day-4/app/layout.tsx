@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
-import React from "react";
+import type { ReactNode } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "A cozy corner of the internet for curious minds.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
@@ -32,7 +32,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               href="/"
               className="flex items-center gap-2 font-bold text-xl text-zinc-900 dark:text-zinc-50 hover:opacity-80 transition-opacity"
             >
-              <span className="text-2xl">🐼</span>
               <span>Blog</span>
               <span className="font-light text-zinc-400 dark:text-zinc-500">blog</span>
             </Link>
@@ -48,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <footer className="border-t border-zinc-200 dark:border-zinc-800 py-8">
           <div className="max-w-3xl mx-auto px-6 text-center text-sm text-zinc-400 dark:text-zinc-600">
-            © {new Date().getFullYear()} blog — Built with Next.js 🐼
+            © {new Date().getFullYear()} blog — Built with Next.js
           </div>
         </footer>
       </body>

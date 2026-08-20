@@ -2,13 +2,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import posts from "@/data/posts.json";
 
+type SlugParams = { params: Promise<{ slug: string }> };
+
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps<"/posts/[slug]">) {
+export async function generateMetadata({ params }: SlugParams) {
   const { slug } = await params;
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
@@ -18,14 +18,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function PostPage({
-  params,
-}: PageProps<"/posts/[slug]">) {
+export default async function PostPage({ params }: SlugParams) {
   const { slug } = await params;
   const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
+    return null; // TypeScript type narrowing
   }
 
   // Render simple markdown-like line breaks

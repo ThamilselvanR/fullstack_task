@@ -3,11 +3,11 @@ import posts from "@/data/posts.json";
 
 export default function Home() {
   return (
-    <div>
+    <section>
       {/* Hero */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-3">
-          Welcome to blog 🐼
+          Welcome to blog
         </h1>
         <p className="text-lg text-zinc-500 dark:text-zinc-400">
           A cozy corner of the internet for curious minds.
@@ -18,11 +18,14 @@ export default function Home() {
       <div className="space-y-6">
         {posts.map((post) => (
           <article
-            key={post.id}
+            key={post.slug}
             className="group block bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
           >
             <Link href={`/posts/${post.slug}`} className="block">
-              <time className="text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">
+              <time
+                dateTime={post.date}
+                className="text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wider"
+              >
                 {new Date(post.date).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
@@ -36,12 +39,13 @@ export default function Home() {
                 {post.excerpt}
               </p>
               <span className="mt-4 inline-flex items-center text-sm font-medium text-zinc-900 dark:text-zinc-50 gap-1 group-hover:gap-2 transition-all">
-                Read more <span aria-hidden>→</span>
+                Read more <span aria-hidden="true">→</span>
               </span>
             </Link>
           </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
+
